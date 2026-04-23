@@ -263,47 +263,47 @@ def main():
     with tab1:
         col_left, col_right = st.columns([1.2, 1], gap="large")
 
-        with col_left:
-            # 👇 YE NAYA CODE
-    st.header("🌾 Irrigation Input Section")
+    with col_left:
+        # 🌾 Irrigation UI
+        st.header("🌾 Irrigation Input Section")
 
-    mode = st.radio("Select Input Mode", ["Manual", "GPS"])
+        mode = st.radio("Select Input Mode", ["Manual", "GPS"])
 
-    if mode == "Manual":
-        district = st.selectbox("Select District", ["Ludhiana"])
-        block = st.selectbox("Select Block", ["Ludhiana-1"])
-    else:
-        st.info("📍 GPS location will be detected")
+        if mode == "Manual":
+            district = st.selectbox("Select District", ["Ludhiana"])
+            block = st.selectbox("Select Block", ["Ludhiana-1"])
+        else:
+            st.info("📍 GPS location will be detected")
 
-    crop = st.selectbox("Select Crop", ["Wheat"])
+        crop = st.selectbox("Select Crop", ["Wheat"])
 
-    variety = st.selectbox("Select Variety", ["PBW-621", "PBW-550", "HD-2967"])
+        variety = st.selectbox("Select Variety", ["PBW-621", "PBW-550", "HD-2967"])
 
-    sowing_date = st.date_input("Select Sowing Date")
+        sowing_date = st.date_input("Select Sowing Date")
 
-    rain_option = st.radio("Rainfall occurred?", ["Yes", "No"])
+        rain_option = st.radio("Rainfall occurred?", ["Yes", "No"])
 
-    if rain_option == "Yes":
-        rain = st.number_input("Enter rainfall (mm)", min_value=0.0)
-    else:
-        rain = 0.0
+        if rain_option == "Yes":
+            rain = st.number_input("Enter rainfall (mm)", min_value=0.0)
+        else:
+            rain = 0.0
 
-    method = st.selectbox("Select Irrigation Method", ["Border", "Sprinkler", "Drip"])
+        method = st.selectbox("Select Irrigation Method", ["Border", "Sprinkler", "Drip"])
 
-    if method == "Border":
-        st.number_input("Field Area (ha)")
-        st.number_input("Depth (mm)")
+        if method == "Border":
+            st.number_input("Field Area (ha)")
+            st.number_input("Depth (mm)")
 
-    elif method == "Sprinkler":
-        st.number_input("Discharge (lph)")
-        st.number_input("Spacing (m)")
+        elif method == "Sprinkler":
+            st.number_input("Discharge (lph)")
+            st.number_input("Spacing (m)")
 
-    elif method == "Drip":
-        st.number_input("Emitter spacing (m)")
-        st.number_input("Flow rate (lph)")
+        elif method == "Drip":
+            st.number_input("Emitter spacing (m)")
+            st.number_input("Flow rate (lph)")
 
-    st.divider()
-            st.subheader("1️⃣ Select Parameters You Have")
+        st.divider()
+        st.subheader("1️⃣ Select Parameters You Have")
             st.markdown("""
             <div class="info-box">
                 ℹ️ <strong>Check only the parameters you have data for.</strong><br>
