@@ -304,7 +304,7 @@ def main():
 
         st.divider()
         st.subheader("1️⃣ Select Parameters You Have")
-            st.markdown("""
+        st.markdown("""
             <div class="info-box">
                 ℹ️ <strong>Check only the parameters you have data for.</strong><br>
                 The app will automatically find the best matching model (R² ≥ 0.90 only).
