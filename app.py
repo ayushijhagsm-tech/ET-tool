@@ -264,9 +264,7 @@ def main():
         col_left, col_right = st.columns([1.2, 1], gap="large")
 
         with col_left:
-            with col_left:
-
-    # 👇 YE NAYA CODE
+            # 👇 YE NAYA CODE
     st.header("🌾 Irrigation Input Section")
 
     mode = st.radio("Select Input Mode", ["Manual", "GPS"])
